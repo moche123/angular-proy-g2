@@ -1,0 +1,13 @@
+<button class="padding btn-favorito" routerLink="/pages/favorites">Listar favoritos</button>
+
+<div class="container-characters">
+    <!-- DIRECTIVA NGFOR -->
+    <section class="item" *ngFor="let person of characters">
+        {{person.name}}
+
+        <img [src]="person.image" alt="">
+
+        <button class="btn-add-favorite" (click)="addFavorite(person)">ADD</button>
+       
+    </section>
+</div>

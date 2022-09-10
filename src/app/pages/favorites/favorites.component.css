@@ -1,0 +1,43 @@
+.container-characters {
+   
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+ 
+    gap: 20px; 
+  
+  }
+  
+  .item {
+    padding: 30px;
+  
+  }
+  
+  .item>img {
+    
+    width: 100%;
+  }
+  
+  .btn-add-favorite {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 19px;
+    background-color: #a0003d;
+    cursor: pointer;
+  
+  }
+
+  .btn-back {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 19px;
+    background-color: #750085;
+    cursor: pointer;
+  
+  }

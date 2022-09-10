@@ -1,0 +1,9 @@
+<button class="btn-back" (click)="back()">Regresar</button>
+<div class="container-characters">
+   <section class="item" *ngFor="let favorite of ['FAV1','FAV2']">
+       {{favorite}}
+
+       <img src="https://cdn.pixabay.com/photo/2018/07/13/10/32/light-bulb-3535435__340.jpg" alt="">
+       <button class="btn-add-favorite" >Remove favorite</button>
+   </section>
+</div>  

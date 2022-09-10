@@ -1,0 +1,91 @@
+/* FLEXBOX
+
+    FLEX DIRECTION : FILA O COLUMNA ----> FILA. se mide por el ancho(izq a der), COL: se mide por el alto(arr a abaj) 
+
+    FLEXBOX Y GRID ----> GRID: DOS DIMENSIONES , FLEX SOLO UNA DIMENSION
+*/
+
+.flexbox-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* ROW: DERECHA A IZQUIERDA(ANCHO)*/
+    justify-content: center;
+  }
+  
+  .login-form {
+    /* width: 25%; */
+    padding: 40px;
+    background: #fff;
+    border-radius: 25px;
+  }
+  
+  .login-form-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .mensaje-erroneo {
+    background: #f44336;
+    color: #fff;
+    padding: 30px 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    width: 30%;
+  }
+  .wrap-input {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .wrap-input span,
+  input {
+    margin-top: 10px;
+  }
+  .label-input{
+    font-size: 15px;
+  }
+  .wrap-input input {
+    height: 35px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    border: 1px solid #8b8b8b;
+    outline: none;
+    line-height: 30px;
+  }
+  
+  .login-form-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 19px;
+    margin-top: 15px;
+  }
+  .blue-valid {
+    background-color: #0086bf;
+    cursor: pointer;
+  }
+  .blue-invalid {
+    background-color: #0086bf;
+    opacity: 0.5;
+  }
+  
+  .margin-mesaje-parrafo{
+    margin: 10px;
+  }
+  
+  .text-danger{
+    color: #f44336;
+  }
+  
+  .crearCuenta{
+    margin-top: 20px;
+  }

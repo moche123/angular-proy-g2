@@ -1,0 +1,20 @@
+.btn-close-session{
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #fff; /*Color de la letra*/
+    font-size: 19px;
+    background-color: #0086bf;
+    cursor: pointer;
+
+}
+.flex{
+    padding: 30px;
+    display: flex;
+    /*NO HAY FLEX DIRECTION ----> ROW*/
+    justify-content: space-between; /*EJE PRINCIPAL. main axis*/
+    align-items: center;/*EJE SECUNDARIO cross axis*/
+    background: rgb(137, 216, 255);
+    margin-bottom: 25px;
+  }
