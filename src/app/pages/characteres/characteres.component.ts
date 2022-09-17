@@ -26,13 +26,19 @@ export class CharacteresComponent implements OnInit {
       IdCharacter: person.id,
       IdUser: localStorage.getItem('userId'),
       nameCharacter: person.name,
-      characterUrlImage: person.image,
+      caracterUrlImagen: person.image,
       token: localStorage.getItem('token')
     }
 
     //! SE ENVIA A BD PARA QUE SE GUARDE
-    console.log('DD')
-    this.router.navigateByUrl('/pages/favorites')
+    this.apiService.addFavorite(body).subscribe(ok=>{
+      console.log(ok, ' Todo está ok')
+      if(ok.ok != false){
+
+        this.router.navigateByUrl('/pages/favorites')
+      }
+    })
+
 
 
   }

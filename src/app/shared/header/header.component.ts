@@ -11,7 +11,10 @@ export class HeaderComponent implements OnInit {
   @Input() pageName : any = '';
   constructor(private router:Router) { }
 
+  public nombreUsuarioLogueado:string = '';
+
   ngOnInit(): void {
+    this.nombreUsuarioLogueado = localStorage.getItem('name')!
   }
 
   cerrarSesion(){

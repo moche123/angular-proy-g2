@@ -1,9 +1,9 @@
 <button class="btn-back" (click)="back()">Regresar</button>
 <div class="container-characters">
-   <section class="item" *ngFor="let favorite of ['FAV1','FAV2']">
-       {{favorite}}
+   <section class="item" *ngFor="let favorite of favorites">
+       {{favorite.nameCharacter}}
 
-       <img src="https://cdn.pixabay.com/photo/2018/07/13/10/32/light-bulb-3535435__340.jpg" alt="">
-       <button class="btn-add-favorite" >Remove favorite</button>
+       <img [src]="favorite.caracterUrlImagen" alt="">
+       <button class="btn-add-favorite" (click)="removeFavorite(favorite)">Remove favorite</button>
    </section>
 </div>  

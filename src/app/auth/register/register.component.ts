@@ -22,7 +22,9 @@ export class RegisterComponent implements OnInit {
  
   constructor(private fb:FormBuilder,
     private router:Router,
-    private authService:AuthService) { }
+    private authService:AuthService
+  
+    ) { }
 
   ngOnInit(): void {
   }
@@ -42,14 +44,64 @@ export class RegisterComponent implements OnInit {
   
   registarUsuario(){
     
-    
     const {name,email,password} = this.myForm.value;
 
+    this.authService.register(name,email,password,1,true)
+        .subscribe(result=> {
+          // console.log(result);
+          if(result===true){
+            this.router.navigateByUrl('/pages')
+          }else{
 
+             //TODO: mostrar mensaje de error
+          //valida los errores (validaciones) desde la base de datos
+          
+          if(result.msg){
+            setTimeout(() => {
+              this.mensaje.push(result.msg) ;
+            }, 300);
+  
+            setTimeout(()=>{
+              this.mensaje=[];
+            },3100)
+          }
 
-   
-    // console.log(this.myForm.valid);
-    // console.log(this.myForm.value);
+          if(result.errors?.name){
+            console.log("pasoo")
+            setTimeout(() => {
+              this.mensaje.push(result.errors.name.msg);
+            }, 300);
+  
+            setTimeout(()=>{
+              this.mensaje=[];
+            },3100)
+           }
+         if(result.errors?.email){
+          console.log("pasoo")
+          setTimeout(() => {
+            this.mensaje.push(result.errors.email.msg);
+          }, 300);
+
+          setTimeout(()=>{
+            this.mensaje=[];
+          },3100)
+         }
+
+         if(result.errors?.password){
+          console.log("pasoo")
+          setTimeout(() => {
+            this.mensaje.push(result.errors.password.msg);
+          }, 300);
+
+          setTimeout(()=>{
+            this.mensaje=[];
+          },3100)
+         }
+           
+            console.log(result)
+          }
+        })
+
   }
 
 
